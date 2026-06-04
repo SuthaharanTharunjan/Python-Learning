@@ -1,4 +1,7 @@
 mass=float(input("Enter your mass: "))
+if mass<=0:
+    print("Mass value must be greater than zero.")
+    mass=float(input("Enter your mass: "))
 unit_of_mass=input("Enter the unit of mass (kg or g): ")
 if unit_of_mass=="g":
     mass=mass/1000
