@@ -10,18 +10,35 @@ while run=="yes":
             break
         except ValueError:
             print("Invalid input. Please enter a numeric value for mass.")
-    unit_of_mass=input("Enter the unit of mass (kg or g): ")
-    unit_of_mass=unit_of_mass.lower()
+    while True:
+        try:
+            unit_of_mass=input("Enter the unit of mass (kg or g): ")
+            unit_of_mass=unit_of_mass.lower()
+            if unit_of_mass not in ["kg", "g"]:
+                print("Invalid unit of mass. Please enter 'kg' or 'g'.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter 'kg' or 'g' for the unit of mass.")
     if unit_of_mass=="g":
         mass=mass/1000
     
     while True:
         try:
             velocity=float(input("Enter your velocity: "))
-            unit_of_velocity=input("Enter the unit of velocity (m/s or km/h): ")
-            unit_of_velocity=unit_of_velocity.lower()
-            if unit_of_velocity=="km/h":
-                velocity=velocity/3.6
+            while True:
+                try:
+                    unit_of_velocity=input("Enter the unit of velocity (m/s or km/h): ")
+                    unit_of_velocity=unit_of_velocity.lower()
+                    if unit_of_velocity=="km/h":
+                        velocity=velocity/3.6
+                    unit_of_velocity=unit_of_velocity.lower()    
+                    if unit_of_velocity not in ["m/s", "km/h"]:    
+                        print("Invalid unit of velocity. Please enter 'm/s' or 'km/h'.")    
+                        continue   
+                    break    
+                except ValueError:
+                    print("Invalid input. Please enter 'm/s' or 'km/h' for the unit of velocity.")            
             if velocity>=299792458:
                 print("Velocity cannot exceed the speed of light.")
                 continue
