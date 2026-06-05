@@ -30,7 +30,3 @@ while run=="yes":
     print("Velocity is:",f"{velocity}{unit_of_velocity}")
     print("Kinetic Energy is:", kinetic_energy, "Joules")
     run=input("Do you want to calculate again? (yes or no): ").lower()
-
-
-    
-
