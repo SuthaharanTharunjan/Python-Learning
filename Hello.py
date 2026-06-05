@@ -1,4 +1,6 @@
-while True:
+run=str
+run="yes"
+while run=="yes":
     mass=float(input("Enter your mass: "))
     if mass<=0:
         print("Mass value must be greater than zero.")
@@ -27,8 +29,7 @@ while True:
 
     print("Kinetic Energy is:", kinetic_energy, "Joules")
     run=input("Do you want to calculate again? (yes or no): ").lower()
-    if run !="yes" or run!="y":
-        break
+
 
     
 
