@@ -1,5 +1,5 @@
 run = "yes"
-gravity = 9.81
+gravity = float(9.81)
 print("""
 =====================================
      Potential Energy Calculator
@@ -45,11 +45,22 @@ while run == "yes":
         except ValueError:
             print("Invalid input. Please enter 'm' or 'km' for the unit of height.")            
     if unit_of_height=="km":
-                height=height*1000            
-    
+                height=height*1000   
+
+    gravity_input=input("Enter the gravitational acceleration (or press Enter to use Earth's gravity): ")
+    while True:
+        try:
+            if gravity_input == "":
+                gravity = 9.81
+            else:
+                gravity = float(gravity_input)
+            break
+        except ValueError:
+            print("Invalid input. Please enter a numeric value for gravitational acceleration.")
     potential_energy=mass*gravity*height
     
     print("Mass is:",f"{mass}{unit_of_mass}")
+    print("Gravitational Acceleration is:", f"{gravity} m/s^2")
     print("Height is:",f"{height}{unit_of_height}")
     print("Potential Energy is:", potential_energy, "Joules")
     run=input("Do you want to calculate again? (yes or no): ").lower()
