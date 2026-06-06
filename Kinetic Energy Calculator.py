@@ -1,6 +1,10 @@
-run=str
-run="yes"
-while run=="yes":
+run = "yes"
+print("""
+=====================================
+      Kinetic Energy Calculator
+=====================================
+""")
+while run == "yes":
     while True:
         try:
             mass=float(input("Enter your mass: "))
