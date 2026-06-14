@@ -7,7 +7,16 @@ while True:
         break
     except ValueError:
         print("Invalid input. Please enter a numeric value.")
-i=int(input("Enter the number of multiples to display: "))
+while True:
+    try        
+        i=int(input("Enter the number of multiples to display: "))
+    except ValueError:
+        print("Invalid input. Please enter a whole number.")
+        continue
+    if i <= 0:
+        print("Please enter a positive integer.")
+        continue
+    break
 for i in range(1, i+1):
     print(i,"X",x,"=", i*x)
 
