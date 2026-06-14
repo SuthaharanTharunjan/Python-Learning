@@ -8,7 +8,7 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a numeric value.")
 while True:
-    try        
+    try:        
         i=int(input("Enter the number of multiples to display: "))
     except ValueError:
         print("Invalid input. Please enter a whole number.")
