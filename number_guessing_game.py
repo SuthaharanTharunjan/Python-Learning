@@ -1,4 +1,5 @@
-num=10
+import random
+num=random.randint(1,100)
 guess=int
 while guess!=num:
     guess=int(input("Enter a number between 1 and 100: "))
