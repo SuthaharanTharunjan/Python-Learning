@@ -6,7 +6,7 @@ while n>0:
     n=n-1
     print()
 '''
-
+'''
 n=int(input("Enter a number: "))
 k=1
 while n>0:
@@ -16,4 +16,4 @@ while n>0:
     print(" "*k,end="")
     k=k+1
     n=n-2     
-
+'''
